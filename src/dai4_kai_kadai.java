@@ -16,7 +16,7 @@ public class dai4_kai_kadai{
         long odds_count = numbers.stream().filter(odd -> isOdd(odd)).count();
         System.out.println(odds_count);
 
-        //リストの中に0があるか判定
+        //リストの中に0があるかを判定
         boolean hasZero = numbers.stream().anyMatch(num -> num == 0);
         System.out.println(hasZero);
 
