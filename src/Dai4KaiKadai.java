@@ -1,20 +1,20 @@
 import java.util.List;
 
-public class dai4_kai_kadai{
+public class Dai4KaiKadai {
 
     public static void main(String[] args){
 
-    //ストリーム
+        //ストリーム
 
         List<Integer> numbers = List.of(0,1,2,3,4,5,6,7,8,9);
 
         //リストの中の奇数を抽出
-        List<Integer> odd_numbers = numbers.stream().filter(odd -> isOdd(odd)).toList();
-        System.out.println(odd_numbers);
+        List<Integer> oddNumbers = numbers.stream().filter(odd -> isOdd(odd)).toList();
+        System.out.println(oddNumbers);
 
         //リストの中の奇数の個数を数える
-        long odds_count = numbers.stream().filter(odd -> isOdd(odd)).count();
-        System.out.println(odds_count);
+        long oddsCount = numbers.stream().filter(odd -> isOdd(odd)).count();
+        System.out.println(oddsCount);
 
         //リストの中に0があるかを判定
         boolean hasZero = numbers.stream().anyMatch(num -> num == 0);
