@@ -20,10 +20,19 @@ public class Dai4KaiKadai {
         boolean hasZero = numbers.stream().anyMatch(num -> num == 0);
         System.out.println(hasZero);
 
+        //リストの中の3の倍数を抽出する
+        List<Integer> multipleOf3 = numbers.stream().filter(num -> isMultipleOf3(num)).toList();
+        System.out.println(multipleOf3);
+
     }
 
     //奇数を判定するメソッド
     public static boolean isOdd(int i) {
         return i % 2 == 1;
+    }
+
+    //3の倍数を判定するメソッド
+    public static boolean isMultipleOf3(int i) {
+        return i % 3 == 0 & i != 0;
     }
 }
